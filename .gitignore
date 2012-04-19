@@ -1,5 +1,5 @@
-# sbt target
-/target/
+# sbt targets
+target/
 
 # Idea stuff
 /.idea/
