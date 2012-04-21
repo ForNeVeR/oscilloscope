@@ -1,6 +1,6 @@
 import org.lwjgl.opengl._
 
-class Window {
+class Window(buffer: CircularBuffer[Double]) {
   private val windowWidth = 800
   private val windowHeight = 600
 
@@ -21,9 +21,14 @@ class Window {
       // TODO: clear display.
     }
 
+    def render() {
+      // TODO: render.
+    }
+
     while (!Display.isCloseRequested) {
       Display.sync(fps)
       clearDisplay()
+      render()
       Display.update()
     }
 
