@@ -1,6 +1,5 @@
 # sbt targets
 target/
 
-# Idea stuff
-/.idea/
-*.iml
+# IDEA stuff
+.idea/workspace.xml
