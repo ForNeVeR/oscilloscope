@@ -1,6 +1,8 @@
+import java.util.Random
+
 class Generator(buffer: CircularBuffer[Double]) {
-  private val rand = new java.util.Random()
-  private def getNext() = rand.nextDouble()
+  private val rand = new Random
+  private def getNext() = rand.nextInt().toDouble / Int.MaxValue
 
   def start() {
     val thread = new Thread(new Runnable {

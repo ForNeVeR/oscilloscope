@@ -1,4 +1,4 @@
-class CircularBuffer[T: Manifest](size: Int) {
+class CircularBuffer[T: Manifest](val size: Int) {
   private val buffer = new Array[T](size)
 
   var position = 0
@@ -8,5 +8,5 @@ class CircularBuffer[T: Manifest](size: Int) {
     position = (position + 1) % size
   }
 
-  def read(index: Int) = buffer(index)
+  def bufferCopy = buffer.clone()
 }
