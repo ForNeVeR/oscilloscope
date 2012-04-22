@@ -31,6 +31,7 @@
     <orderEntry type="library" name="net.java.jutils_jutils_1.0.0" level="project" />
     <orderEntry type="library" name="net.java.jinput_jinput-platform_2.0.5" level="project" />
     <orderEntry type="library" name="org.lwjgl.lwjgl_lwjgl_util_2.8.3" level="project" />
+    <orderEntry type="library" name="com.neuronrobotics_nrjavaserial_3.7.5.1" level="project" />
   </component>
 </module>
 

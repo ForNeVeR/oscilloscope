@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.neuronrobotics_nrjavaserial_3.7.5.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.neuronrobotics/nrjavaserial/jars/nrjavaserial-3.7.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.neuronrobotics/nrjavaserial/docs/nrjavaserial-3.7.5.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.neuronrobotics/nrjavaserial/srcs/nrjavaserial-3.7.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
