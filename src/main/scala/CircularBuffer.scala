@@ -1,5 +1,5 @@
 class CircularBuffer[T: Manifest](val size: Int) {
-  private val buffer = new Array[T](size)
+  val buffer = new Array[T](size)
 
   var position = 0
 

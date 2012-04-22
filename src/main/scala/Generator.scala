@@ -1,10 +1,12 @@
 trait Generator {
+  var stop = false
+  
   def loop()
 
   def start() {
     val thread = new Thread(new Runnable {
       def run() {
-        while (true) {
+        while (!stop) {
           loop()
         }
       }
@@ -12,5 +14,9 @@ trait Generator {
 
     thread.setDaemon(true)
     thread.start()
+  }
+  
+  def destroy() {
+	stop = true
   }
 }

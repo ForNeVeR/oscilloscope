@@ -24,14 +24,14 @@ class Window(buffer: CircularBuffer[Double]) {
     }
 
     def render(position: Int, data: Array[Double]) {
-      val min = data.min
-      val max = data.max
+      val min = 0
+      val max = 1024
 
       def scaleX(x: Double) = 2 * x / data.size - 1.0
       def scaleY(y: Double) = 2 * (y - min) / (max - min) - 1.0
 
       def renderData() {
-        glBegin(GL_LINES)
+        glBegin(GL_LINE_STRIP)
         for (index <- 0 until data.length) {
           val x = scaleX(index)
           val y = scaleY(data(index))
@@ -60,11 +60,11 @@ class Window(buffer: CircularBuffer[Double]) {
       Display.sync(fps)
       clearDisplay()
       val position = buffer.position
-      val data = buffer.bufferCopy
+      val data = buffer.buffer.clone()
       render(position, data)
       Display.update()
     }
 
-    Display.destroy()
+	Display.destroy()
   }
 }
