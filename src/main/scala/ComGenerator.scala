@@ -1,8 +1,8 @@
 import gnu.io.NRSerialPort
 import java.io.{InputStreamReader, BufferedReader}
 
-class ComGenerator(buffer: CircularBuffer[Double], portName: String) extends Generator {
-  private val port = new NRSerialPort("COM1", 115200)
+class ComGenerator(buffer: CircularBuffer[Double], portName: String, baudRate: Int) extends Generator {
+  private val port = new NRSerialPort(portName, baudRate)
   port.connect()
   private val stream = port.getInputStream
   private val reader = new BufferedReader(new InputStreamReader(stream))
